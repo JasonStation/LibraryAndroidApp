@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <permission
+        android:name="com.example.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.permission.MAPS_RECEIVE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Perpus"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".SMSForm"
+            android:exported="true"
+            android:label="Send SMS Message"
+            android:parentActivityName=".RequestForm"/>
+        <activity
+            android:name=".MapView"
+            android:exported="true"
+            android:label="Set pickup location"
+            android:parentActivityName=".MainForm" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCbEYI_JzasAuDqEGCL8lwq9o-n7U7INfg" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".RequestDetailForm"
+            android:exported="true"
+            android:label="Book Detail Request"
+            android:parentActivityName=".RequestForm" />
+        <activity
+            android:name=".RequestForm"
+            android:exported="true"
+            android:label="Request Forms"
+            android:parentActivityName=".MainForm" />
+        <activity
+            android:name=".BookDetailForm"
+            android:exported="true"
+            android:label="Book Detail"
+            android:parentActivityName=".MainForm" />
+        <activity
+            android:name=".MainForm"
+            android:exported="true"
+            android:label="Books" />
+        <activity
+            android:name=".MainActivityRegister"
+            android:exported="true"
+            android:label="Register"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Simple App">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="49dp"
+        android:gravity="center"
+        android:text="Register account"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" >
+
+        <TextView
+            android:id="@+id/registerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textStyle="bold"
+            android:layout_marginTop = "10dp"
+            android:layout_marginBottom = "15dp"
+            android:gravity="center"
+            android:textSize="40sp"/>
+
+        <EditText
+            android:id="@+id/regEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below = "@id/registerText"
+            android:layout_marginLeft = "15dp"
+            android:layout_marginRight="15dp"
+            android:inputType="textEmailAddress"
+            android:hint="Enter email address"
+            />
+
+        <EditText
+            android:id="@+id/regPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below = "@id/regEmail"
+            android:layout_marginLeft = "15dp"
+            android:layout_marginRight="15dp"
+            android:inputType="textPassword"
+            android:hint="Enter password"
+            />
+
+        <EditText
+            android:id="@+id/regPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below = "@id/regPass"
+            android:layout_marginLeft = "15dp"
+            android:layout_marginRight="15dp"
+            android:inputType="text|number"
+            android:hint="Enter phone number"
+            />
+
+        <TextView
+            android:id="@+id/regBirthText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/regPhone"
+            android:layout_marginTop = "15dp"
+            android:layout_marginLeft = "15dp"
+            android:text = "Enter birth date:"
+            />
+
+        <Button
+            android:id="@+id/regDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/regBirthText"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft = "15dp"
+            android:layout_marginRight="15dp"
+            android:text="Pick birth date"
+            />
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/regDatePicker"
+            android:gravity="center"
+            android:text="Choose date"/>
+
+        <CheckBox
+            android:id="@+id/agreeCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateText"
+            android:layout_marginLeft="20dp"
+            android:text="I accept all the license agreement."/>
+
+        <Button
+            android:id="@+id/regButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/agreeCheckbox"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft = "15dp"
+            android:layout_marginRight="15dp"
+            android:text="Register account"/>
+
+        <TextView
+            android:id="@+id/regWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/regButton"
+            android:textColor="@color/red"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bookView">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_marginBottom="3dp">
+
+            <ImageView
+                android:id="@+id/bookCover"
+                android:layout_width="123dp"
+                android:layout_height="162dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.461"
+                app:srcCompat="@drawable/diarykid" />
+
+            <TextView
+                android:id="@+id/bookTitle"
+                android:layout_width="254dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/bookCover"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bookAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:text="TextView"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/bookTitle"
+                app:layout_constraintTop_toTopOf="@+id/bookTitle" />
+
+            <TextView
+                android:id="@+id/bookSynopsis"
+                android:layout_width="254dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="12dp"
+                android:text="It’s a new school year, and Greg Heffley finds himself thrust into middle school, where undersized weaklings share the hallways with kids who are taller, meaner, and already shaving."
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/bookAuthor"
+                app:layout_constraintTop_toBottomOf="@+id/bookAuthor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

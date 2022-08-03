@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookDetailForm">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/detailCover2"
+                android:layout_width="168dp"
+                android:layout_height="295dp"
+                android:layout_below="@id/detailAuthor2"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="122dp"
+                android:layout_marginTop="-2dp"
+                android:layout_marginEnd="122dp"
+                app:srcCompat="@drawable/diarykid" />
+
+            <TextView
+                android:id="@+id/detailTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="9dp"
+                android:gravity="center"
+                android:text="Diary of a Wimpy Kid: Dog Days"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/detailAuthor2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detailTitle2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="52dp"
+                android:gravity="center"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/detailSynopsis2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detailCover2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:text="TextView"
+                app:layout_constraintTop_toBottomOf="@+id/detailCover2" />
+
+            <TextView
+                android:id="@+id/requesterEmail"
+                android:layout_width="379dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detailSynopsis2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:text="Requester: info@account.com"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/receiverEmail"
+                android:layout_width="379dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/requesterEmail"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="Receiver: info@account.com"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/pickupText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_margin="20dp"
+                android:layout_below="@id/receiverEmail"
+                android:text="Pickup Location:"/>
+
+            <fragment
+                android:id="@+id/requestMapView"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/pickupText"
+                android:layout_margin="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/SMSFormButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/requestMapView"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Send SMS" />
+
+            <Button
+                android:id="@+id/acceptButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/SMSFormButton"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:text="Accept Request"
+                app:layout_constraintTop_toBottomOf="@+id/receiverEmail"
+                tools:layout_editor_absoluteX="16dp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
